@@ -9,10 +9,11 @@
 </head>
 <body>
 
-	<%
-		long boardId = Long.parseLong(request.getParameter("boardId"));
+	<% 
+		long boardId = Long.parseLong(request.getParameter("boardId")); 
 		BoardDTO boardDTO = BoardDAO.getInstance().getBoardDetail(boardId);
 	%>
+
 
 	<div align="center">
 		<h3>게시글 상세 조회</h3>
@@ -43,7 +44,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="button" value="수정" onclick="">
+					<input type="button" value="수정" onclick="location.href='bAuthentication.jsp?boardId=<%=boardDTO.getBoardId()%>&menu=update'">
 					<input type="button" value="삭제" onclick="">
 					<input type="button" value="목록보기" onclick="location.href='bList.jsp'">
 				</td>

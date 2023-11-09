@@ -3,6 +3,9 @@ package step01_boardEx;
 import java.util.Date;
 
 public class BoardDTO {
+	
+	//DTO란 Data Transfer Object의 약자로, 계층 간 데이터 전송을 위해 도메인 모델 대신 사용되는 객체이다.
+
 
 	private long boardId;
 	private String writer;
