@@ -36,7 +36,7 @@
 			</tr>
 			<tr>
 				<td>제목</td>
-				<td><%=boardDTO.getWriter() %></td>
+				<td><%=boardDTO.getSubject() %></td>
 			</tr>
 			<tr>
 				<td>글 내용</td>
@@ -45,7 +45,7 @@
 			<tr>
 				<td colspan="2">
 					<input type="button" value="수정" onclick="location.href='bAuthentication.jsp?boardId=<%=boardDTO.getBoardId()%>&menu=update'">
-					<input type="button" value="삭제" onclick="">
+					<input type="button" value="삭제" onclick="location.href='bAuthentication.jsp?boardId=<%=boardDTO.getBoardId()%>&menu=delete'">
 					<input type="button" value="목록보기" onclick="location.href='bList.jsp'">
 				</td>
 			</tr>

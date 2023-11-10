@@ -59,9 +59,14 @@
 				</script>
 	<%
 				
-			}
+			}		// "menu= delete" 는 중간에 뛰어쓰기쓰면 에러난다!
 			else if (menu.equals("delete")) {
 				// 삭제 화면으로 이동
+	%>
+				<script type="text/javascript">
+					location.href = "bDelete.jsp?boardId=" + <%=boardId %>;
+				</script>						
+	<%			
 			}
 			
 		}

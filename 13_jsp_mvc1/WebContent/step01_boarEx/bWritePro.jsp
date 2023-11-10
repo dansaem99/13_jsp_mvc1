@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>bWritePro</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -35,10 +36,20 @@
 	%>
 	
 	<script type="text/javascript">
-		alert("게시글이 되었습니다.");
+		/*
+			alert("게시글이 되었습니다.");
+			
+			// location.href = "bWrite.jsp"; > url로 페이지를 이동한다.
+			location.href = "bList.jsp";
+		*/
+		Swal.fire({
+			  title: "게시글이 등록 되었습니다.",
+			  text: "메인화면으로 이동합니다.",
+			  icon: "success"
+		}).then(function(){
+			location.href = "bList.jsp"
+		});
 		
-		// location.href = "bWrite.jsp"; > url로 페이지를 이동한다.
-		location.href = "bList.jsp";
 	</script>
 
 </body>

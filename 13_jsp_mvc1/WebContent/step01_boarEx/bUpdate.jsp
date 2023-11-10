@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>bUpdate</title>
+<script src="../ckeditor/ckeditor.js"></script>
 </head>
 <body>
 
@@ -35,6 +36,7 @@
 					<td>
 						<!-- textarea는 input타입이다. 그래서 넘어가는거다. -->
 						<textarea rows="10" cols="60" name="content"><%=boardDTO.getContent() %></textarea>
+						<script>CKEDITOR.replace("content");</script>
 					</td>
 				</tr>
 			</table>

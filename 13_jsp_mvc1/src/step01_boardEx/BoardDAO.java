@@ -216,4 +216,24 @@ public class BoardDAO {
 		
 	}
 	
+	
+	// 게시물 삭제 DAO
+	public void deleteBoard(Long boardId) {
+		
+		try {
+			
+			// 우리 학원은 지우면 진짜 지우지만 회사는 지운다가 비활성화로 말한다.
+			getConnection();
+			pstmt = conn.prepareStatement("DELETE FROM BOARD WHERE BOARD_ID = ?");
+			pstmt.setLong(1, boardId);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		
+	}
+	
 }
